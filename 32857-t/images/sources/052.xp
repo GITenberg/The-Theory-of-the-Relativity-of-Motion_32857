@@ -1,0 +1,46 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+#include "tolman.h"
+using namespace ePiX;
+
+double rad(0.06), scale(1.5);
+
+void ball(const P& loc, const P& dir, const std::string& msg)
+{
+  P ctr(loc - 5.5*rad*dir), DX(scale*rad*J(dir));
+  circle(ctr, rad);
+  dashed();
+  dash_size(6);
+  line(loc, loc - 8*rad*dir);
+  solid();
+  label(ctr + DX, 2*J(dir), msg, c);
+  Arrow(ctr - DX - 1.25*rad*dir, ctr - DX + 2.25*rad*dir);
+}
+
+
+int main()
+{
+  picture(P(0,0), P(3,2), "4.5 x 3in");
+
+  begin();
+
+  arrow_inset(0.75);
+  arrow_ratio(3);
+  arrow_width(4);
+
+  Arrow(P(2.5, 0.7), P(2.9, 0.7));
+  label(P(2.7, 0.7), P(0,-4), "$V$", b);
+
+  ball(P(1.9, 1.1), -E_2, "$A$");
+  ball(P(1.5, 1), E_2, "$B$");
+
+  label(P(0.9, 1.4), "$S$");
+  label(P(0.4, 0.7), "$S'$");
+
+  label(P(1.5,1), "\\includegraphics[width=4.5in]{052_nolabels.eps}");
+
+  font_face("sc");
+  label(P(0.5*(xmin() + xmax()),ymin()), "Fig.~9.");
+  tikz_format();
+  end();
+}

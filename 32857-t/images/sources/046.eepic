@@ -1,0 +1,25 @@
+%% Generated from 046.xp on Sun May 30 14:08:51 EDT 2010 by
+%% ePiX-1.2.4
+%% 
+%%   Cartesian bounding box: [0,1] x [-0.25,0.25]
+%%   Actual size: 3 x 0.5in
+%%   Figure offset: left by 0in, down by 0in
+%% 
+%% usepackages tikz
+%% 
+\xdefinecolor{rgb_000000}{rgb}{0,0,0}%
+\begin{tikzpicture}
+\pgfsetlinewidth{0.4pt}
+\useasboundingbox (0in,0in) rectangle (3in,0.5in);
+\pgfsetlinewidth{0.8pt}
+\draw (0in,0.25in)--(1.5in,0.25in)--(3in,0.25in);
+\pgftext[at={\pgfpoint{0.15in}{0.305348in}}] {\makebox(0,0)[b]{\hbox{\color{rgb_000000}$B$}}}
+\pgftext[at={\pgfpoint{0.9in}{0.305348in}}] {\makebox(0,0)[b]{\hbox{\color{rgb_000000}$B'$}}}
+\pgftext[at={\pgfpoint{2.4in}{0.305348in}}] {\makebox(0,0)[b]{\hbox{\color{rgb_000000}$n$}}}
+\pgftext[at={\pgfpoint{3in}{0.305348in}}] {\makebox(0,0)[b]{\hbox{\color{rgb_000000}$n'$}}}
+\pgftext[at={\pgfpoint{0.15in}{0.25in}}] {\makebox(0,0){\hbox{\color{rgb_000000}$\rule{0.5pt}{6pt}$}}}
+\pgftext[at={\pgfpoint{0.9in}{0.25in}}] {\makebox(0,0){\hbox{\color{rgb_000000}$\rule{0.5pt}{6pt}$}}}
+\pgftext[at={\pgfpoint{2.4in}{0.25in}}] {\makebox(0,0){\hbox{\color{rgb_000000}$\rule{0.5pt}{6pt}$}}}
+\pgftext[at={\pgfpoint{3in}{0.25in}}] {\makebox(0,0){\hbox{\color{rgb_000000}$\rule{0.5pt}{6pt}$}}}
+\pgftext[at={\pgfpoint{1.5in}{0in}}] {\makebox(0,0)[c]{\hbox{\color{rgb_000000}\textsc{Fig.~8.}}}}
+\end{tikzpicture}

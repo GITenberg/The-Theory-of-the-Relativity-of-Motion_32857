@@ -1,0 +1,44 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+#include "tolman.h"
+using namespace ePiX;
+
+int main()
+{
+  picture(P(0,0), P(1,1), "1.75 x 1.75in");
+
+  begin();
+  arrow_init();
+  degrees();
+
+  Arrow(P(0.55, 0.5), P(1, 0.5));
+
+  bold();
+
+  dashed();
+  dash_size(6);
+  line(P(0, 0), P(1,0));
+  line(P(0, 0), P(0,1));
+  solid();
+
+  mirror(P(1,0), 0);
+  mirror(P(0,1), 90);
+
+  /*
+  marker(P(xmin(),0), PLUS);
+  marker(P(xmin(),0), TIMES);
+  */
+
+  label(P(0,0), P(-4,0), "$O$", l);
+  label(P(sc_mir*dX_mir,1), P(2,3), "$A$", r);
+  label(P(1 +dX_mir,0), P(2,0), "$B$", r);
+
+  font_size("footnotesize");
+  label(P(0.75, 0.5), P(0,-6), "\\textit{Direction of Earth's Motion}", b);
+
+  font_size();
+  font_face("sc");
+  label(P(0.5*(xmin() + xmax()),ymin()), P(0,-12), "Fig.~3.", b);
+  tikz_format();
+  end();
+}

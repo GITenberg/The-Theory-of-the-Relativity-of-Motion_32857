@@ -1,0 +1,45 @@
+%% Generated from 045.xp on Sun May 30 14:08:49 EDT 2010 by
+%% ePiX-1.2.4
+%% 
+%%   Cartesian bounding box: [0,2] x [0,1]
+%%   Actual size: 4 x 2in
+%%   Figure offset: left by 0in, down by 0in
+%% 
+%% usepackages tikz
+%% 
+\xdefinecolor{rgb_000000}{rgb}{0,0,0}%
+\begin{tikzpicture}
+\pgfsetlinewidth{0.4pt}
+\useasboundingbox (0in,0in) rectangle (4in,2in);
+\pgfsetlinewidth{0.8pt}
+\draw (3.1in,0.625in)--(3.5in,0.625in)--(3.9in,0.625in);
+\pgfsetlinewidth{0.4pt}
+\draw (3.1in,0.625in)--(3.9in,0.625in);
+\pgfsetfillcolor{rgb_000000}
+\draw [fill](3.87924in,0.625in)--(3.81698in,0.597326in)--
+  (3.9in,0.625in)--(3.81698in,0.652674in)--(3.87924in,0.625in)--cycle;
+\draw (3.1in,0.625in)--(3.08962in,0.640567in)--(3.07924in,0.656133in);
+\draw (3.1in,0.625in)--(3.08962in,0.609433in)--(3.07924in,0.593867in);
+\draw (3.12076in,0.625in)--(3.11038in,0.640567in)--(3.1in,0.656133in);
+\draw (3.12076in,0.625in)--(3.11038in,0.609433in)--(3.1in,0.593867in);
+\draw (3.14151in,0.625in)--(3.13113in,0.640567in)--(3.12076in,0.656133in);
+\draw (3.14151in,0.625in)--(3.13113in,0.609433in)--(3.12076in,0.593867in);
+\draw (3.16227in,0.625in)--(3.15189in,0.640567in)--(3.14151in,0.656133in);
+\draw (3.16227in,0.625in)--(3.15189in,0.609433in)--(3.14151in,0.593867in);
+\draw (3.18302in,0.625in)--(3.17264in,0.640567in)--(3.16227in,0.656133in);
+\draw (3.18302in,0.625in)--(3.17264in,0.609433in)--(3.16227in,0.593867in);
+\pgfsetlinewidth{0.8pt}
+\draw (0.5in,1.65in)--(1.6in,1.65in)--(2.7in,1.65in);
+\draw (0.5in,0.625in)--(1.6in,0.625in)--(2.7in,0.625in);
+\pgftext[at={\pgfpoint{0.8in}{1.70535in}}] {\makebox(0,0)[b]{\hbox{\color{rgb_000000}$A$}}}
+\pgftext[at={\pgfpoint{2.3in}{1.70535in}}] {\makebox(0,0)[b]{\hbox{\color{rgb_000000}$m$}}}
+\pgftext[at={\pgfpoint{0.8in}{0.680348in}}] {\makebox(0,0)[b]{\hbox{\color{rgb_000000}$B$}}}
+\pgftext[at={\pgfpoint{2.3in}{0.680348in}}] {\makebox(0,0)[b]{\hbox{\color{rgb_000000}$n$}}}
+\pgftext[at={\pgfpoint{0.8in}{1.65in}}] {\makebox(0,0){\hbox{\color{rgb_000000}$\rule{0.5pt}{6pt}$}}}
+\pgftext[at={\pgfpoint{2.3in}{1.65in}}] {\makebox(0,0){\hbox{\color{rgb_000000}$\rule{0.5pt}{6pt}$}}}
+\pgftext[at={\pgfpoint{0.8in}{0.625in}}] {\makebox(0,0){\hbox{\color{rgb_000000}$\rule{0.5pt}{6pt}$}}}
+\pgftext[at={\pgfpoint{2.3in}{0.625in}}] {\makebox(0,0){\hbox{\color{rgb_000000}$\rule{0.5pt}{6pt}$}}}
+\pgftext[at={\pgfpoint{3.5in}{0.569652in}}] {\makebox(0,0)[t]{\hbox{\color{rgb_000000}$V$}}}
+\pgftext[at={\pgfpoint{2in}{1in}}] {\makebox(0,0)[c]{\hbox{\color{rgb_000000}\includegraphics[width=4in]{045_nolabels.eps}}}}
+\pgftext[at={\pgfpoint{2in}{0in}}] {\makebox(0,0)[c]{\hbox{\color{rgb_000000}\textsc{Fig.~7.}}}}
+\end{tikzpicture}

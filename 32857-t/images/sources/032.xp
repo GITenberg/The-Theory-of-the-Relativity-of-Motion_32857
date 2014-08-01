@@ -1,0 +1,37 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+#include "tolman.h"
+using namespace ePiX;
+
+double dX(0.05), sc(2.5);
+
+int main()
+{
+  picture(P(-1,-1), P(1,1), "3 x 3in");
+
+  begin();
+  degrees();
+  bold();
+  mirror(P(0,0), -45);
+
+  mirror(P(0,1), 90);
+  mirror(P(1,0),  0);
+
+  dashed();
+  dash_size(6);
+  line(P(-1,0), P(1,0));
+  line(P(0,-1), P(0,1));
+  marker(P(-1,0), PLUS);
+  marker(P(-1,0), TIMES);
+
+  label(P(-1,0), P(-4,0), "$S$", l);
+  label(P(0,0), P(4,-4), "$A$", br);
+  label(P(sc*dX,1), P(2,3), "$B$", r);
+  label(P(1 +dX,0), P(2,0), "$C$", r);
+  label(P(0,-1), P( 2,0), "$O$", tr);
+
+  font_face("sc");
+  label(P(0,-1), P(0,-12), "Fig.~1.", b);
+  tikz_format();
+  end();
+}

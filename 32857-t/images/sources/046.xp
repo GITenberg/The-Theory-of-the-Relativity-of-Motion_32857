@@ -1,0 +1,36 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+#include "tolman.h"
+using namespace ePiX;
+
+double Y1(0.825), Y2(0.3125);
+
+int main()
+{
+  picture(P(0,-0.25), P(1,0.25), "3 x 0.5in");
+
+  begin();
+  arrow_init();
+
+  P ptB1(0.05,0), ptB2(0.3,0), ptn1(0.8,0), ptn2(1,0);
+
+  bold();
+  line(P(xmin()), P(xmax()));
+
+  label(ptB1, P(0,4), "$B$", t);
+  label(ptB2, P(0,4), "$B'$", t);
+
+  label(ptn1, P(0,4), "$n$", t);
+  label(ptn2, P(0,4), "$n'$", t);
+
+  h_axis_tick(ptB1);
+  h_axis_tick(ptB2);
+
+  h_axis_tick(ptn1);
+  h_axis_tick(ptn2);
+
+  font_face("sc");
+  label(P(0.5*(xmin() + xmax()),ymin()), "Fig.~8.");
+  tikz_format();
+  end();
+}

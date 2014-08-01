@@ -1,0 +1,48 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+using namespace ePiX;
+
+double my_dX(0.5);
+
+void tee(const P& loc, const std::string& m1, const std::string& m2,
+	 const std::string& m3, const P& off, epix_label_posn A, bool f=false)
+{
+  P tmp(my_dX,0);
+  line(loc - tmp, loc + tmp);
+  dashed();
+  line(loc, loc - P(0,1));
+
+  label(loc, P(0,4), m2, t);
+  label(loc - tmp, P(-2,0), m1, l);
+  label(loc + tmp, P( 2,0), m1, r);
+
+  label(loc - P(0, 1), off, m3, A);
+
+  if (f)
+    {
+      line(loc - P(0,1) - 1.1*tmp, loc - P(0,1) + 1.1*tmp);
+      line(loc, loc - P(0,1) - 0.9*tmp);
+      line(loc, loc - P(0,1) + 0.9*tmp);
+    }    
+  solid();
+}
+
+int main()
+{
+  picture(P(-1,0), P(1,1), "3.5 x 1.5in");
+
+  begin();
+
+  bold();
+  dash_size(6);
+  tee(P(-0.75, 1), "$a$", "$m$", "$A$", P(-4,0), l);
+  tee(P( 0.75, 1), "$b$", "$n$", "$p$", P(0,-4), b, true);
+
+  label(P(0.75) - 1.1*P(my_dX), P(-4,0), "$B$", l);
+  label(P(0.75) + 1.1*P(my_dX), P(4,0), "$B'$", r);
+
+  font_face("sc");
+  label(P(0,0.5*(xmin() + xmax()), ymin()), P(0,-12), "Fig.~6.", b);
+  tikz_format();
+  end();
+}

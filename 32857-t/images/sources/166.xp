@@ -1,0 +1,50 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+#include "tolman.h"
+using namespace ePiX;
+
+double wd(0.15), dL(0.075), len(2.5);
+
+P loc(0.25, 0.25), ux(0.5,0), uy(0,0.7), u(ux+uy);
+
+int main()
+{
+  picture(P(0,0), P(1,1), "2.25 x 2.25in");
+
+  begin();
+  arrow_init();
+  degrees();
+
+  bold();
+  line(P(0,1), P(1,1));
+  line(P(0,1), P(0,0));
+
+  line(P(wd,1-wd), P(1,1-wd));
+  line(P(wd,1-wd), P(wd,0));
+
+  arrow(P(0,0), P(len*wd,0));
+  arrow(P(1,1), P(1,1 - len*wd));
+
+  aarrow(P(-dL,0), P(-dL, 1));
+  aarrow(P(0,1 + dL), P(1, 1 + dL));
+
+  label_angle(90);
+  masklabel(P(-dL, 0.5), "$l_1$");
+  label_angle(0);
+
+  masklabel(P(0.5, 1+dL), "$l_2$");
+
+  circ(P(0,1) + 0.5*wd*P(1,-1));
+
+  label(P(0.66*len*wd,0), P(0,-4), "$F_1$", b);
+  label(P(1, 1 - 0.66*len*wd), P(4,0), "$F_2$", r);
+
+  label(P(0,1), P(-2,2), "$B$", tl);
+  label(P(1,1), P( 2,2), "$C$", tr);
+  label(P(0,0), P(-2,-2), "$A$", bl);
+
+  font_face("sc");
+  label(P(0.5*(xmin() + xmax()),ymin()), P(0,-18), "Fig.~14.", b);
+  tikz_format();
+  end();
+}

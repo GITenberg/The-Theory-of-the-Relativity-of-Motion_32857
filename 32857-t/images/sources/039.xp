@@ -1,0 +1,49 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+#include "tolman.h"
+using namespace ePiX;
+
+double rad(0.05), Rad(0.5);
+
+void orbit(const P& loc)
+{
+  circle(loc, rad);
+  aarrow(loc + P(rad + 0.5*dX_mir,0), loc + P(3,0));
+
+  dashed();
+  ellipse(loc, Rad*E_1, Rad*E_2, 0, 360, 30);
+  solid();
+  masklabel(loc + P(1.5,0), "$l$");
+  label(loc + P(3,0), P(4,0), "$O$", r);
+  label(loc + P(3,0), P(0,-4), "\\textit{Observer}", b);
+}
+
+void direct(const P&loc, const P& dir, const std::string& msg)
+{
+  circle(loc + Rad*J(dir), rad);
+  arrow(loc + Rad*J(dir), loc + Rad*J(dir) + 1.2*Rad*dir);
+  label(loc + Rad*J(dir), -7*(dir-J(dir)), msg, c);
+  label(loc + Rad*J(dir) + 0.5*Rad*dir, 4*J(dir), "$u$",c);
+}
+
+int main()
+{
+  picture(P(-0.5,-1.5), P(3.5,1.5), "4 x 3in");
+
+  begin();
+  degrees();
+  arrow_init();
+
+  bold();
+
+  orbit(P(0,-1));
+  orbit(P(0,1));
+
+  direct(P(0,-1), -E_1, "$B$");
+  direct(P(0, 1),  E_1, "$A$");
+
+  font_face("sc");
+  label(P(0.5*(xmin() + xmax()),ymin()), P(0,-12), "Fig.~4.", b);
+  tikz_format();
+  end();
+}

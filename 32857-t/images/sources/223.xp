@@ -1,0 +1,102 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+#include "tolman.h"
+using namespace ePiX;
+
+P f1p(double t)
+{
+  return P(cosh(t), sinh(t));
+}
+
+P f1m(double t)
+{
+  return P(-cosh(t), sinh(t));
+}
+
+P f2p(double t)
+{
+  return P(sinh(t), cosh(t));
+}
+
+P f2m(double t)
+{
+  return P(sinh(t), -cosh(t));
+}
+
+double MAX(2.25), sc(0.95), Rad(3);
+
+int main()
+{
+  picture(P(-4,-4), P(4,4), "4 x 4in");
+
+  begin();
+  arrow_init();
+  degrees();
+  bold();
+  P pB(sc*MAX, sc*MAX), pD(-sc*MAX, -sc*MAX), O(0,0);
+  P pA(-sc*MAX, sc*MAX), pC(sc*MAX, -sc*MAX);
+
+  double th(20), t0(atanh(Tan(th)));
+
+  P pa1(f1p(0)), pa2(f1p(t0)), pb1(f2p(0)), pb2(f2p(t0));
+
+  clip_box(P(-MAX,-MAX,-1), P(MAX,MAX,1));
+  plot(f1p, -3, 3, 40);
+  plot(f1m, -3, 3, 40);
+
+  plot(f2p, -3, 3, 40);
+  plot(f2m, -3, 3, 40);
+  clip_box();
+
+  line(P(xmin(), 0), P(xmax(), 0));
+  line(P(0, ymin()), P(0, ymax()));
+
+  line(pA, pC);
+  line(pB, pD);
+
+  label(pA, P(-2, 2), "$A$", tl);
+  label(pC, P( 2,-2), "$C$", br);
+
+  label(pB, P( 2, 2), "$B$", tr);
+  label(pD, P(-2,-2), "$D$", bl);
+
+  label(O, P(-12,2), "$O$", tl);
+
+  label(pa1, P(2,2), "$a$", tr);
+  label(pa2, P(4,4), "$a'$", tr);
+
+  label(pb1, P(2,2), "$b$", tr);
+  label(pb2, P(4,4), "$b'$", tr);
+
+  label(P(xmax(),0), P(2,0), "$X_1$", r);
+  label(P(0,ymax()), P(2,0), "$X_4$", br);
+
+  label(polar(4, th), P(2,0), "$X_1'$", r);
+  label(polar(4, 90-th), P(2,0), "$X_4'$", r);
+
+  arc_arrow(O, Rad, 0.5*th, 0);
+  arc_arrow(O, Rad, 0.5*th, th);
+
+  arc_arrow(O, Rad, 90 - 0.5*th, 90);
+  arc_arrow(O, Rad, 90 - 0.5*th, 90 - th);
+
+  masklabel(polar(Rad, 0.5*th), "$\\theta$");
+  masklabel(polar(Rad, 90 - 0.5*th), "$\\theta$");
+
+  dashed();
+  line(polar(-4,th), polar(4, th));
+  line(polar(-4,90-th), polar(4, 90-th));
+
+  dash_size(6);
+  P tmp1(polar(2.75,90-th)), tmp2(polar(4, 90-th)), tmp3(tmp2.x1(), tmp1.x2());
+  line(tmp1, tmp3);
+  line(tmp2, tmp3);
+
+  label(0.5*(tmp1+tmp3), P(0,-4), "$dx_1$", b);
+  label(0.5*(tmp2+tmp3), P(4, 0), "$dx_4$", r);
+
+  font_face("sc");
+  label(P(0.5*(xmin() + xmax()),ymin()), P(0,-12), "Fig.~18.", b);
+  tikz_format();
+  end();
+}

@@ -1,0 +1,44 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+#include "tolman.h"
+using namespace ePiX;
+
+double Y1(0.825), Y2(0.3125);
+
+int main()
+{
+  picture(P(0,0), P(2,1), "4 x 2in");
+
+  begin();
+  arrow_init();
+
+  P pta1(0.25, Y1), pta2(1.35, Y1), ptA(0.4, Y1), ptm(1.15, Y1);
+  P ptb1(0.25, Y2), ptb2(1.35, Y2), ptB(0.4, Y2), ptn(1.15, Y2);
+
+  Arrow(P(1.55, Y2), P(1.95, Y2));
+
+  bold();
+  line(pta1, pta2);
+  line(ptb1, ptb2);
+
+  label(ptA, P(0,4), "$A$", t);
+  label(ptm, P(0,4), "$m$", t);
+
+  label(ptB, P(0,4), "$B$", t);
+  label(ptn, P(0,4), "$n$", t);
+
+  h_axis_tick(ptA);
+  h_axis_tick(ptm);
+
+  h_axis_tick(ptB);
+  h_axis_tick(ptn);
+
+  label(P(1.75,Y2), P(0,-4), "$V$", b);
+
+  label(P(1,0.5), "\\includegraphics[width=4in]{045_nolabels.eps}");
+
+  font_face("sc");
+  label(P(0.5*(xmin() + xmax()),ymin()), "Fig.~7.");
+  tikz_format();
+  end();
+}

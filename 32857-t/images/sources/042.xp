@@ -1,0 +1,50 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+#include "tolman.h"
+using namespace ePiX;
+
+double Y1(0.85);
+
+int main()
+{
+  picture(P(0,0), P(2,1), "4 x 2in");
+
+  begin();
+  arrow_init();
+
+  P pta1(0.25, Y1), pta2(0.75, Y1), ptA(0.5, 0.3);
+  P ptb1(1.15, Y1), ptb2(1.65, Y1), ptB(1.4, 0.3);
+
+  Arrow(P(1.775, 0.45), P(1.95, 0.45));
+
+  bold();
+  line(pta1, pta2);
+  line(ptb1, ptb2);
+
+  dashed();
+  dash_size(6);
+  line(0.5*(pta1 + pta2), ptA);
+  solid();
+
+  label(0.5*(pta1 + pta2), P(0,2), "$m$", t);
+  label(P(1.85, 0.45), P(0,-4), "$V$", b);
+
+  label(pta1, P(-4,0), "$a$", l);
+  label(pta2, P( 4,0), "$a$", r);
+
+  label(ptb1, P(-4,0), "$b$", l);
+  label(ptb2, P( 4,0), "$b$", r);
+
+  ddot(ptA, P(-4,0), "$A$", l);
+  ddot(ptB, P(-4,0), "$B$", l);
+
+  label(P(0.65, 0.55), "$S$");
+  label(P(1.55, 0.55), "$S'$");
+
+  label(P(1,0.5), "\\includegraphics[width=4in]{042_nolabels.eps}");
+
+  font_face("sc");
+  label(P(0.5*(xmin() + xmax()),ymin()), P(0,12), "Fig.~5.", t);
+  tikz_format();
+  end();
+}

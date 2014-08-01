@@ -1,0 +1,66 @@
+%% Generated from 036.xp on Sun May 30 14:08:44 EDT 2010 by
+%% ePiX-1.2.4
+%% 
+%%   Cartesian bounding box: [-5,5] x [-1,1]
+%%   Actual size: 5 x 1in
+%%   Figure offset: left by 0in, down by 0in
+%% 
+%% usepackages tikz
+%% 
+\xdefinecolor{rgb_000000}{rgb}{0,0,0}%
+\begin{tikzpicture}
+\pgfsetlinewidth{0.4pt}
+\useasboundingbox (0in,0in) rectangle (5in,1in);
+\pgfsetlinewidth{0.8pt}
+\draw (5in,0.75in)--(4.75in,0.75in)--(4.5in,0.75in);
+\pgfsetlinewidth{0.4pt}
+\draw (5in,0.75in)--(4.5in,0.75in);
+\pgfsetfillcolor{rgb_000000}
+\draw [fill](4.52076in,0.75in)--(4.58302in,0.777674in)--
+  (4.5in,0.75in)--(4.58302in,0.722326in)--(4.52076in,0.75in)--cycle;
+\draw (5in,0.75in)--(5.01038in,0.734433in)--(5.02076in,0.718867in);
+\draw (5in,0.75in)--(5.01038in,0.765567in)--(5.02076in,0.781133in);
+\draw (4.97924in,0.75in)--(4.98962in,0.734433in)--(5in,0.718867in);
+\draw (4.97924in,0.75in)--(4.98962in,0.765567in)--(5in,0.781133in);
+\draw (4.95849in,0.75in)--(4.96887in,0.734433in)--(4.97924in,0.718867in);
+\draw (4.95849in,0.75in)--(4.96887in,0.765567in)--(4.97924in,0.781133in);
+\draw (4.93773in,0.75in)--(4.94811in,0.734433in)--(4.95849in,0.718867in);
+\draw (4.93773in,0.75in)--(4.94811in,0.765567in)--(4.95849in,0.781133in);
+\draw (4.91698in,0.75in)--(4.92736in,0.734433in)--(4.93773in,0.718867in);
+\draw (4.91698in,0.75in)--(4.92736in,0.765567in)--(4.93773in,0.781133in);
+\pgfsetlinewidth{0.8pt}
+\draw (4.5in,0.25in)--(4.75in,0.25in)--(5in,0.25in);
+\pgfsetlinewidth{0.4pt}
+\draw (4.5in,0.25in)--(5in,0.25in);
+\draw [fill](4.97924in,0.25in)--(4.91698in,0.222326in)--
+  (5in,0.25in)--(4.91698in,0.277674in)--(4.97924in,0.25in)--cycle;
+\draw (4.5in,0.25in)--(4.48962in,0.265567in)--(4.47924in,0.281133in);
+\draw (4.5in,0.25in)--(4.48962in,0.234433in)--(4.47924in,0.218867in);
+\draw (4.52076in,0.25in)--(4.51038in,0.265567in)--(4.5in,0.281133in);
+\draw (4.52076in,0.25in)--(4.51038in,0.234433in)--(4.5in,0.218867in);
+\draw (4.54151in,0.25in)--(4.53113in,0.265567in)--(4.52076in,0.281133in);
+\draw (4.54151in,0.25in)--(4.53113in,0.234433in)--(4.52076in,0.218867in);
+\draw (4.56227in,0.25in)--(4.55189in,0.265567in)--(4.54151in,0.281133in);
+\draw (4.56227in,0.25in)--(4.55189in,0.234433in)--(4.54151in,0.218867in);
+\draw (4.58302in,0.25in)--(4.57264in,0.265567in)--(4.56227in,0.281133in);
+\draw (4.58302in,0.25in)--(4.57264in,0.234433in)--(4.56227in,0.218867in);
+\pgfsetlinewidth{0.8pt}
+\draw (1.5in,0.25in)--(2.9375in,0.25in)--(4.375in,0.25in);
+\draw (1.5in,0.75in)--(2.9375in,0.75in)--(4.375in,0.75in);
+\pgftext[at={\pgfpoint{0in}{0.5in}}] {\makebox(0,0){\hbox{\color{rgb_000000}$+$}}}
+\pgftext[at={\pgfpoint{0in}{0.5in}}] {\makebox(0,0){\hbox{\color{rgb_000000}$\times$}}}
+\pgftext[at={\pgfpoint{0in}{0.416978in}}] {\makebox(0,0)[t]{\hbox{\color{rgb_000000}$S$}}}
+\pgftext[at={\pgfpoint{2in}{0.75in}}] {\makebox(0,0){\hbox{\color{rgb_000000}$\rule{0.5pt}{6pt}$}}}
+\pgftext[at={\pgfpoint{4in}{0.75in}}] {\makebox(0,0){\hbox{\color{rgb_000000}$\rule{0.5pt}{6pt}$}}}
+\pgftext[at={\pgfpoint{3in}{0.75in}}] {\makebox(0,0){\hbox{\color{rgb_000000}$\rule{0.5pt}{6pt}$}}}
+\pgftext[at={\pgfpoint{2in}{0.805348in}}] {\makebox(0,0)[b]{\hbox{\color{rgb_000000}$a$}}}
+\pgftext[at={\pgfpoint{4in}{0.805348in}}] {\makebox(0,0)[b]{\hbox{\color{rgb_000000}$a'$}}}
+\pgftext[at={\pgfpoint{3in}{0.805348in}}] {\makebox(0,0)[b]{\hbox{\color{rgb_000000}$A$}}}
+\pgftext[at={\pgfpoint{2in}{0.25in}}] {\makebox(0,0){\hbox{\color{rgb_000000}$\rule{0.5pt}{6pt}$}}}
+\pgftext[at={\pgfpoint{4in}{0.25in}}] {\makebox(0,0){\hbox{\color{rgb_000000}$\rule{0.5pt}{6pt}$}}}
+\pgftext[at={\pgfpoint{3in}{0.25in}}] {\makebox(0,0){\hbox{\color{rgb_000000}$\rule{0.5pt}{6pt}$}}}
+\pgftext[at={\pgfpoint{2in}{0.194652in}}] {\makebox(0,0)[t]{\hbox{\color{rgb_000000}$b$}}}
+\pgftext[at={\pgfpoint{4in}{0.194652in}}] {\makebox(0,0)[t]{\hbox{\color{rgb_000000}$b'$}}}
+\pgftext[at={\pgfpoint{3in}{0.194652in}}] {\makebox(0,0)[t]{\hbox{\color{rgb_000000}$B$}}}
+\pgftext[at={\pgfpoint{2.5in}{-0.166044in}}] {\makebox(0,0)[t]{\hbox{\color{rgb_000000}\textsc{Fig.~2.}}}}
+\end{tikzpicture}

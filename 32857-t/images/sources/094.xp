@@ -1,0 +1,42 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+#include "tolman.h"
+using namespace ePiX;
+
+double rad(0.033), scale(1.75), dr(scale*rad);
+
+P loc(0.25, 0.25), ux(0.5,0), uy(0,0.7), u(ux+uy);
+
+int main()
+{
+  picture(P(0,0), P(1,1.5), "2 x 3in");
+
+  begin();
+  arrow_init();
+
+  bold();
+  line(P(dr,0), P(1,0));
+  line(P(0,dr), P(0,0.75 - dr));
+  line(P(0,0.75 + dr), P(0, 1.5));
+
+  circle(P(0,0), rad);
+  circle(P(0,0.75), rad);
+
+  P loc(3*rad, 0.75);
+  Arrow(loc + P(dr,0), loc + P(0.4,0));
+  Arrow(loc + P(0,dr), loc + P(0,0.5));
+
+  label(P(-rad,0), P(-3, 0), "$e$", l);
+  label(P(-rad,0.75), P(-3, 0), "$e_1$", l);
+
+  label(P(xmax(),0), P( 0,-2), "$X$", bl);
+  label(P(0,ymax()), P(-2, 0), "$Y$", bl);
+
+  label(loc + P(dr,0), P(2,-6), "$U_x = V$", br);
+  label(loc + P(0, 0.25), P(3,0), "$U_y", r);
+
+  font_face("sc");
+  label(P(0.5*(xmin() + xmax()),ymin()), P(0,-12), "Fig.~13.", b);
+  tikz_format();
+  end();
+}

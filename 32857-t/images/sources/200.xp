@@ -1,0 +1,80 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+#include "tolman.h"
+using namespace ePiX;
+
+double wd(0.6), Lft(3), Rght(6.5);
+
+double tmin(10), tmax(180 - tmin), dt(5);
+P ctr(2.75,1), v1(0, 0.3), v2(-0.25,0);
+
+void axes(const P& loc)
+{
+  line(loc, loc + P(1,0));
+  line(loc, loc + P(0,1));
+  line(loc, loc + cis(-135));
+
+  label(loc + P(1,0), P(0,-2), "$Y$", bl);
+  label(loc + P(0,1), P(2,-2), "$Z$", r);
+  label(loc + cis(-135), P(4,0), "$X$", r);
+}
+
+P my_loc(double t)
+{
+  return ctr + Cos(t)*v1 + Sin(t)*v2;
+}
+
+void my_Arrow(){
+
+  ellipse(ctr, v1, v2, tmin, tmax);
+  arrow(my_loc(tmax - 5*dt), my_loc(tmax));
+
+  double pip(pt_to_screen(1.5));
+  plain();
+
+  for (int i=0; i<5; ++i)
+    {
+      double t(tmin + 1.5*i*dt);
+      P tail(my_loc(t)), head(my_loc(t + dt));
+      P dL(head - tail);
+      dL *= pip/norm(dL);
+
+      line(tail, tail - sc_arr*dL + 1.5*J(dL));
+      line(tail, tail - sc_arr*dL - 1.5*J(dL));
+    }
+}
+
+int main()
+{
+  picture(P(0,0), P(7,2), "4.2 x 1.2in");
+
+  begin();
+  degrees();
+  arrow_init();
+
+  bold();
+  axes(P(1, 1));
+
+  line(P(2.5,1), P(xmax(),1));
+
+  my_Arrow();
+
+  fill(Black(0.2));
+  rect(P(Lft, 2 - wd), P(Rght, 2));
+  rect(P(Lft, 0), P(Rght, wd));
+  nofill();
+
+  dashed();
+  dash_size(6);
+
+  line(P(Lft,0), P(Lft,2));
+  line(P(Rght,0), P(Rght,2));
+
+  label(P(Rght, 2 - 0.5*wd), P(2,0), "$A$", r);
+  label(P(Lft, 2 - 0.5*wd), P(-2,0), "$A$", l);
+
+  font_face("sc");
+  label(P(0.5*(xmin() + xmax()),ymin()), P(0,-12), "Fig.~15.", b);
+  tikz_format();
+  end();
+}

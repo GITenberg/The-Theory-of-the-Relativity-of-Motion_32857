@@ -1,0 +1,66 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+//#include "tolman.h"
+using namespace ePiX;
+
+int main()
+{
+  picture(P(0,-1), P(4,4), "3.6 x 4.5in");
+
+  begin();
+  degrees();
+  //  arrow_init();
+
+  double t1(0.9), t2(2), t3(2.25), t4(3.25), th(-15);
+
+  P O(0,0), ptc(4.5,4.5);
+  P p1a(t1,t1), p2a(t2,t2), p3a(t2,t1);
+
+  P b1(polar(t3, th)), b2(polar(t4, th));
+  Segment L1(O, ptc), L2(b1, b1 + cis(th + 90)), L3(b2, b2 + cis(th + 90));
+  P p1b(L1*L2), p2b(L1*L3), p3b(p1b + polar(t4 - t3, th));
+
+  bold();
+
+  line(O, P(xmax(),0));
+  line(O, P(0,ymax()));
+
+  dashed();
+  line(O, polar(xmax(), th)); 
+  line(O, polar(ymax(), th + 90)); 
+
+  label(polar(xmax(), th), polar(4, th), "$X'$", br);
+  label(polar(ymax(), th + 90), P(-2,-2), "$T'$", bl);
+
+  dash_size(6);
+  line(P(t1,0), p1a);
+  line(P(t2,0), p2a);
+  line(p1a, p3a);
+
+  label(0.5*(p1a + p3a), P(0,-4), "$\\Delta x$", b);
+  label(0.5*(p2a + p3a), P(4, 0), "$\\Delta t$", r);
+
+  line(polar(t3, th), p1b);
+  line(polar(t4, th), p2b);
+  line(p1b, p3b);
+
+  line_style("-   ----------   -");
+  line(O, 1.1*p2b);
+
+  label_angle(th);
+
+  label(1.1*p2b, P(2,-2), "$c$", br);
+
+  label(0.5*(p1b + p3b), P(0,-4), "$\\Delta x'$", b);
+  label(0.5*(p2b + p3b), P(4, 0), "$\\Delta t'$", r);
+
+  label_angle(0);
+  label(P(0,0), P(-2,-2), "$O$", l);
+  label(P(xmax(),0), P(2,0), "$X$", r);
+  label(P(0,ymax()), P(-2,0), "$T$", bl);
+
+  font_face("sc");
+  label(P(0.5*(xmin() + xmax()),ymin()), P(0,-12), "Fig.~17.", b);
+  tikz_format();
+  end();
+}

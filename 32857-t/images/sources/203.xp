@@ -1,0 +1,45 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+//#include "tolman.h"
+using namespace ePiX;
+
+double xa(1), dt(1), dx(0.9), t0(3.5), m(dt/dx);
+
+int main()
+{
+  picture(P(0,0), P(4,3.5), "3.6 x 3.15in");
+
+  begin();
+  //  degrees();
+  //  arrow_init();
+
+  bold();
+
+  line(P(0,0), P(xmax(),0));
+  line(P(0,0), P(0,ymax()));
+
+  dashed();
+  line(P(xa,0), P(xa, ymax()));
+  line(P(xa,0), P(xmax(), m*(xmax() - xa)));
+ 
+  dash_size(6);
+  line(P(t0,0), P(t0, m*(t0 - xa)));
+  line(P(t0 - dx,0), P(t0 - dx, m*(t0 - dx - xa)));
+  line(P(t0, m*(t0 - dx - xa)), P(t0 - dx, m*(t0 - dx - xa)));
+
+  label(P(0,0), P(-2,-2), "$O$", bl);
+  label(P(xmax(),0), P(0,-2), "$X$", bl);
+  label(P(0,ymax()), P(-2,0), "$T$", bl);
+
+  label(P(xa,0), P(0,-4), "$a$", b);
+  label(P(xa,ymax()), P(4,0), "$b$", r);
+  label(P(xmax(), m*(xmax() - xa)), P(2,-2), "$c$", br);
+
+  label(P(t0 - 0.5*dx, m*(t0 - dx - xa)), P(0,-4), "$\\Delta x$", b);
+  label(P(t0, m*(t0 - dx - xa) + 0.5*dt), P(4,0), "$\\Delta t$", r);
+
+  font_face("sc");
+  label(P(0.5*(xmin() + xmax()),ymin()), P(0,-18), "Fig.~16.", b);
+  tikz_format();
+  end();
+}

@@ -1,0 +1,129 @@
+%% Generated from 038.xp on Sun May 30 14:11:46 EDT 2010 by
+%% ePiX-1.2.4
+%% 
+%%   Cartesian bounding box: [0,1] x [0,1]
+%%   Actual size: 1.75 x 1.75in
+%%   Figure offset: left by 0in, down by 0in
+%% 
+%% usepackages tikz
+%% 
+\xdefinecolor{rgb_000000}{rgb}{0,0,0}%
+\begin{tikzpicture}
+\pgfsetlinewidth{0.4pt}
+\useasboundingbox (0in,0in) rectangle (1.75in,1.75in);
+\pgfsetlinewidth{0.8pt}
+\draw (0.9625in,0.875in)--(1.35625in,0.875in)--(1.75in,0.875in);
+\pgfsetlinewidth{0.4pt}
+\draw (0.9625in,0.875in)--(1.75in,0.875in);
+\pgfsetfillcolor{rgb_000000}
+\draw [fill](1.72924in,0.875in)--(1.66698in,0.847326in)--
+  (1.75in,0.875in)--(1.66698in,0.902674in)--(1.72924in,0.875in)--cycle;
+\draw (0.9625in,0.875in)--(0.952122in,0.890567in)--(0.941744in,0.906133in);
+\draw (0.9625in,0.875in)--(0.952122in,0.859433in)--(0.941744in,0.843867in);
+\draw (0.983256in,0.875in)--(0.972878in,0.890567in)--(0.9625in,0.906133in);
+\draw (0.983256in,0.875in)--(0.972878in,0.859433in)--(0.9625in,0.843867in);
+\draw (1.00401in,0.875in)--(0.993633in,0.890567in)--(0.983256in,0.906133in);
+\draw (1.00401in,0.875in)--(0.993633in,0.859433in)--(0.983256in,0.843867in);
+\draw (1.02477in,0.875in)--(1.01439in,0.890567in)--(1.00401in,0.906133in);
+\draw (1.02477in,0.875in)--(1.01439in,0.859433in)--(1.00401in,0.843867in);
+\draw (1.04552in,0.875in)--(1.03514in,0.890567in)--(1.02477in,0.906133in);
+\draw (1.04552in,0.875in)--(1.03514in,0.859433in)--(1.02477in,0.843867in);
+\pgfsetlinewidth{0.8pt}
+\draw (0in,0in)--(0.0198864in,0in);
+\draw (0.0596591in,0in)--(0.0795455in,0in);
+\draw (0.0795455in,0in)--(0.0994318in,0in);
+\draw (0.139205in,0in)--(0.159091in,0in);
+\draw (0.159091in,0in)--(0.178977in,0in);
+\draw (0.21875in,0in)--(0.238636in,0in);
+\draw (0.238636in,0in)--(0.258523in,0in);
+\draw (0.298295in,0in)--(0.318182in,0in);
+\draw (0.318182in,0in)--(0.338068in,0in);
+\draw (0.377841in,0in)--(0.397727in,0in);
+\draw (0.397727in,0in)--(0.417614in,0in);
+\draw (0.457386in,0in)--(0.477273in,0in);
+\draw (0.477273in,0in)--(0.497159in,0in);
+\draw (0.536932in,0in)--(0.556818in,0in);
+\draw (0.556818in,0in)--(0.576705in,0in);
+\draw (0.616477in,0in)--(0.636364in,0in);
+\draw (0.636364in,0in)--(0.65625in,0in);
+\draw (0.696023in,0in)--(0.715909in,0in);
+\draw (0.715909in,0in)--(0.735795in,0in);
+\draw (0.775568in,0in)--(0.795455in,0in);
+\draw (0.795455in,0in)--(0.815341in,0in);
+\draw (0.855114in,0in)--(0.875in,0in);
+\draw (0.875in,0in)--(0.894886in,0in);
+\draw (0.934659in,0in)--(0.954545in,0in);
+\draw (0.954545in,0in)--(0.974432in,0in);
+\draw (1.0142in,0in)--(1.03409in,0in);
+\draw (1.03409in,0in)--(1.05398in,0in);
+\draw (1.09375in,0in)--(1.11364in,0in);
+\draw (1.11364in,0in)--(1.13352in,0in);
+\draw (1.1733in,0in)--(1.19318in,0in);
+\draw (1.19318in,0in)--(1.21307in,0in);
+\draw (1.25284in,0in)--(1.27273in,0in);
+\draw (1.27273in,0in)--(1.29261in,0in);
+\draw (1.33239in,0in)--(1.35227in,0in);
+\draw (1.35227in,0in)--(1.37216in,0in);
+\draw (1.41193in,0in)--(1.43182in,0in);
+\draw (1.43182in,0in)--(1.4517in,0in);
+\draw (1.49148in,0in)--(1.51136in,0in);
+\draw (1.51136in,0in)--(1.53125in,0in);
+\draw (1.57102in,0in)--(1.59091in,0in);
+\draw (1.59091in,0in)--(1.6108in,0in);
+\draw (1.65057in,0in)--(1.67045in,0in);
+\draw (1.67045in,0in)--(1.69034in,0in);
+\draw (1.73011in,0in)--(1.75in,0in);
+\draw (0in,0in)--(0in,0.0198864in);
+\draw (0in,0.0596591in)--(0in,0.0795455in);
+\draw (0in,0.0795455in)--(0in,0.0994318in);
+\draw (0in,0.139205in)--(0in,0.159091in);
+\draw (0in,0.159091in)--(0in,0.178977in);
+\draw (0in,0.21875in)--(0in,0.238636in);
+\draw (0in,0.238636in)--(0in,0.258523in);
+\draw (0in,0.298295in)--(0in,0.318182in);
+\draw (0in,0.318182in)--(0in,0.338068in);
+\draw (0in,0.377841in)--(0in,0.397727in);
+\draw (0in,0.397727in)--(0in,0.417614in);
+\draw (0in,0.457386in)--(0in,0.477273in);
+\draw (0in,0.477273in)--(0in,0.497159in);
+\draw (0in,0.536932in)--(0in,0.556818in);
+\draw (0in,0.556818in)--(0in,0.576705in);
+\draw (0in,0.616477in)--(0in,0.636364in);
+\draw (0in,0.636364in)--(0in,0.65625in);
+\draw (0in,0.696023in)--(0in,0.715909in);
+\draw (0in,0.715909in)--(0in,0.735795in);
+\draw (0in,0.775568in)--(0in,0.795455in);
+\draw (0in,0.795455in)--(0in,0.815341in);
+\draw (0in,0.855114in)--(0in,0.875in);
+\draw (0in,0.875in)--(0in,0.894886in);
+\draw (0in,0.934659in)--(0in,0.954545in);
+\draw (0in,0.954545in)--(0in,0.974432in);
+\draw (0in,1.0142in)--(0in,1.03409in);
+\draw (0in,1.03409in)--(0in,1.05398in);
+\draw (0in,1.09375in)--(0in,1.11364in);
+\draw (0in,1.11364in)--(0in,1.13352in);
+\draw (0in,1.1733in)--(0in,1.19318in);
+\draw (0in,1.19318in)--(0in,1.21307in);
+\draw (0in,1.25284in)--(0in,1.27273in);
+\draw (0in,1.27273in)--(0in,1.29261in);
+\draw (0in,1.33239in)--(0in,1.35227in);
+\draw (0in,1.35227in)--(0in,1.37216in);
+\draw (0in,1.41193in)--(0in,1.43182in);
+\draw (0in,1.43182in)--(0in,1.4517in);
+\draw (0in,1.49148in)--(0in,1.51136in);
+\draw (0in,1.51136in)--(0in,1.53125in);
+\draw (0in,1.57102in)--(0in,1.59091in);
+\draw (0in,1.59091in)--(0in,1.6108in);
+\draw (0in,1.65057in)--(0in,1.67045in);
+\draw (0in,1.67045in)--(0in,1.69034in);
+\draw (0in,1.73011in)--(0in,1.75in);
+\draw (1.75in,-0.21875in)--(1.75in,0.21875in)--
+  (1.8375in,0.21875in)--(1.8375in,-0.21875in)--(1.75in,-0.21875in)--cycle;
+\draw (0.21875in,1.75in)--(-0.21875in,1.75in)--
+  (-0.21875in,1.8375in)--(0.21875in,1.8375in)--(0.21875in,1.75in)--cycle;
+\pgftext[at={\pgfpoint{-0.055348in}{0in}}] {\makebox(0,0)[r]{\hbox{\color{rgb_000000}$O$}}}
+\pgftext[at={\pgfpoint{0.246424in}{1.79151in}}] {\makebox(0,0)[l]{\hbox{\color{rgb_000000}$A$}}}
+\pgftext[at={\pgfpoint{1.86517in}{0in}}] {\makebox(0,0)[l]{\hbox{\color{rgb_000000}$B$}}}
+\pgftext[at={\pgfpoint{1.3125in}{0.791978in}}] {\makebox(0,0)[t]{\hbox{\color{rgb_000000}\footnotesize \textit{Direction of Earth's Motion}}}}
+\pgftext[at={\pgfpoint{0.875in}{-0.166044in}}] {\makebox(0,0)[t]{\hbox{\color{rgb_000000}\textsc{Fig.~3.}}}}
+\end{tikzpicture}
