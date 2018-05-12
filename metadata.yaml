@@ -1,0 +1,31 @@
+_repo: The-Theory-of-the-Relativity-of-Motion_32857
+_version: 0.1.0
+covers:
+- cover_type: generated
+  image_path: cover.png
+creator:
+  author:
+    agent_name: Tolman, Richard C. (Richard Chace)
+    alias: Tolman, Richard Chace
+    birthdate: 1881
+    deathdate: 1948
+    gutenberg_agent_id: '36080'
+    url: http://www.gutenberg.org/2009/agents/36080
+description: ''
+gutenberg_bookshelf:
+- Mathematics
+- Physics
+gutenberg_issued: '2010-06-17'
+gutenberg_type: Text
+identifiers:
+  gutenberg: '32857'
+language: en
+publisher: Project Gutenberg
+rights: Public domain in the USA.
+rights_url: http://creativecommons.org/about/pdm
+subjects:
+- !lcsh 'Dynamics'
+- !lcsh 'Relativity (Physics)'
+- !lcc 'QC'
+title: The Theory of the Relativity of Motion
+url: http://www.gutenberg.org/ebooks/32857
