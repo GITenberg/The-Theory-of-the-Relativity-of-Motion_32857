@@ -12,6 +12,8 @@ creator:
     gutenberg_agent_id: '36080'
     url: http://www.gutenberg.org/2009/agents/36080
 description: ''
+edition_identifiers:
+  edition_id: http://www.gutenberg.org/ebooks/32857#The-Theory-of-the-Relativity-of-Motion
 gutenberg_bookshelf:
 - Mathematics
 - Physics
